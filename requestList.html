@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="test.css">
+  <title>Blood Donation Request List</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fa fa-list"></i> Blood Donation Request List</h1>
+      <p class="highlight"><i class="fa fa-info-circle"></i> Below is the list of all blood donation requests. Use the action buttons to manage requests.</p>
+    </header>
+
+    <section>
+      <table id="requestList">
+        <thead>
+          <tr>
+            <th><i class="fa fa-user"></i> Recipient</th>
+            <th><i class="fa fa-tint"></i> Blood Type</th>
+            <th><i class="fa fa-medkit"></i> Units</th>
+            <th><i class="fa fa-clock-o"></i> Urgency</th>
+            <th><i class="fa fa-cogs"></i> Actions</th>
+          </tr>
+        </thead>
+        <tbody id="requestsTableBody">
+          <!-- Requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <p id="noRequestsMessage" class="hidden"><i class="fa fa-exclamation-circle"></i> No requests found.</p>
+    </section>
+
+
+  </div>
+
+  <!-- Modal for viewing details -->
+  <div id="viewModal" class="modal hidden">
+    <div class="modal-content">
+      <h3><i class="fa fa-eye"></i> Request Details</h3>
+      <p><strong>Recipient Name:</strong> <span id="viewRecipientName">N/A</span></p>
+      <p><strong>Age:</strong> <span id="viewAge">N/A</span></p>
+      <p><strong>Blood Type:</strong> <span id="viewBloodType">N/A</span></p>
+      <p><strong>Units:</strong> <span id="viewUnits">N/A</span></p>
+      <p><strong>Urgency:</strong> <span id="viewUrgency">N/A</span></p>
+      <p><strong>Hospital:</strong> <span id="viewHospital">N/A</span></p>
+      <p><strong>Doctor:</strong> <span id="viewDoctor">N/A</span></p>
+      <p><strong>Location:</strong> <span id="viewLocation">N/A</span></p>
+      <p><strong>Reason:</strong> <span id="viewReason">N/A</span></p>
+      <p><strong>Timestamp:</strong> <span id="viewTimestamp">N/A</span></p>
+      <div class="modal-actions">
+        <button id="closeViewModal" class="btn close"><i class="fa fa-times"></i> Close</button>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+  <a href="requestList.html" class="btn">
+    <i class="fas fa-list"></i> Recent Requests
+  </a>
+  <a href="approvedRequests.html" class="btn">
+    <i class="fas fa-check"></i> Approved Requests
+  </a>
+  <a href="deniedRequests.html" class="btn">
+    <i class="fas fa-times"></i> Denied Requests
+  </a>
+  <a href="lst.html" class="btn">
+    <i class="fas fa-folder"></i> Cleared Requests
+  </a>
+  <a href="pesa.html" class="btn">
+    <i class="fas fa-file-invoice-dollar"></i> Finance Report
+  </a>
+  <a href="demo.html" class="btn">
+    <i class="fas fa-plus-circle"></i> Make a Request
+  </a>
+  <a href="karibu.html" class="back-btn">
+    <i class="fas fa-arrow-left"></i> Back to Form
+  </a>
+</footer>
+
+  <script src="loadRequests.js" defer></script>
+  <script src="loads.js" defer></script>
+</body>
+</html>

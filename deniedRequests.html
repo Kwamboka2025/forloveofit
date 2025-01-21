@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Denied Requests</title>
+</head>
+<body>
+  <header>
+    <h2><i class="fas fa-ban"></i> Denied Blood Requests</h2>
+  </header>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th><i class="fas fa-user"></i> Recipient</th>
+          <th><i class="fas fa-tint"></i> Blood Type</th>
+          <th><i class="fas fa-flask"></i> Units</th>
+          <th><i class="fas fa-exclamation-circle"></i> Urgency</th>
+          <th><i class="fas fa-times-circle"></i> Denial Reasons</th>
+          <th><i class="fas fa-cogs"></i> Actions</th>
+        </tr>
+      </thead>
+      <tbody id="deniedRequestsList">
+        <!-- Rows will be dynamically populated -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Modal for viewing denied request details -->
+  <div id="viewModal" class="hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal">
+      <h3><i class="fas fa-eye"></i> View Request Details</h3>
+      <p><strong>Recipient Name:</strong> <span id="viewRecipientName">N/A</span></p>
+      <p><strong>Age:</strong> <span id="viewAge">N/A</span></p>
+      <p><strong>Blood Type:</strong> <span id="viewBloodType">N/A</span></p>
+      <p><strong>Units:</strong> <span id="viewUnits">N/A</span></p>
+      <p><strong>Urgency:</strong> <span id="viewUrgency">N/A</span></p>
+      <p><strong>Denial Reasons:</strong> <span id="viewDenialReasons">N/A</span></p>
+      <p><strong>Additional Notes:</strong> <span id="viewAdditionalNotes">N/A</span></p>
+      <button id="closeViewModal"><i class="fas fa-times"></i> Close</button>
+    </div>
+  </div>
+<footer>
+  <a href="requestList.html" class="btn">
+    <i class="fas fa-list"></i> Recent Requests
+  </a>
+  <a href="approvedRequests.html" class="btn">
+    <i class="fas fa-check"></i> Approved Requests
+  </a>
+  <a href="deniedRequests.html" class="btn">
+    <i class="fas fa-times"></i> Denied Requests
+  </a>
+  <a href="lst.html" class="btn">
+    <i class="fas fa-folder"></i> Cleared Requests
+  </a>
+  <a href="pesa.html" class="btn">
+    <i class="fas fa-file-invoice-dollar"></i> Finance Report
+  </a>
+  <a href="demo.html" class="btn">
+    <i class="fas fa-plus-circle"></i> Make a Request
+  </a>
+  <a href="karibu.html" class="back-btn">
+    <i class="fas fa-arrow-left"></i> Back to Form
+  </a>
+</footer>
+  <script src="deniedRequests.js" defer></script>
+</body>
+</html>
